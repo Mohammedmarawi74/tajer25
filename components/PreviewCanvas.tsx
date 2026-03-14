@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CarouselConfig, SlideContent } from '../types';
 import { THEMES } from '../constants';
@@ -10,6 +9,20 @@ interface PreviewCanvasProps {
 
 const PreviewCanvas: React.FC<PreviewCanvasProps> = ({ config, activeSlide }) => {
   const theme = THEMES[config.globalTheme];
+
+  // Determine badge color based on theme
+  const getBadgeColor = () => {
+    switch (config.globalTheme) {
+      case 'mint':
+        return '#10B981';
+      case 'purple':
+        return '#8B5CF6';
+      case 'electric':
+        return '#2563EB';
+      default:
+        return '#2563EB';
+    }
+  };
 
   return (
     <div className="preview-content">
@@ -25,15 +38,43 @@ const PreviewCanvas: React.FC<PreviewCanvasProps> = ({ config, activeSlide }) =>
         </div>
       )}
 
-      {/* Decorative Elements */}
+      {/* Decorative Gradient Blobs */}
       <div
         className="preview-decoration preview-decoration-large"
-        style={{ backgroundColor: theme.primary }}
+        style={{
+          background: config.globalTheme === 'mint' 
+            ? 'linear-gradient(135deg, #10B981 0%, #34D399 100%)'
+            : config.globalTheme === 'purple'
+            ? 'linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)'
+            : 'linear-gradient(135deg, #2563EB 0%, #3B82F6 100%)'
+        }}
       ></div>
       <div
         className="preview-decoration preview-decoration-small"
-        style={{ backgroundColor: theme.primary }}
+        style={{
+          background: config.globalTheme === 'mint'
+            ? 'linear-gradient(135deg, #34D399 0%, #6EE7B7 100%)'
+            : config.globalTheme === 'purple'
+            ? 'linear-gradient(135deg, #A78BFA 0%, #C4B5FD 100%)'
+            : 'linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)'
+        }}
       ></div>
+
+      {/* Bokeh Effect Circles */}
+      <div className="bokeh-container">
+        <div className="bokeh-circle bokeh-circle-1"></div>
+        <div className="bokeh-circle bokeh-circle-2"></div>
+        <div className="bokeh-circle bokeh-circle-3"></div>
+        <div className="bokeh-circle bokeh-circle-4"></div>
+        <div className="bokeh-circle bokeh-circle-5"></div>
+        <div className="bokeh-circle bokeh-circle-6"></div>
+        <div className="bokeh-circle bokeh-circle-7"></div>
+        <div className="bokeh-circle bokeh-circle-8"></div>
+        <div className="bokeh-circle bokeh-circle-9"></div>
+        <div className="bokeh-circle bokeh-circle-10"></div>
+        <div className="bokeh-circle bokeh-circle-11"></div>
+        <div className="bokeh-circle bokeh-circle-12"></div>
+      </div>
 
       {/* Logo Display - Top Center */}
       {config.logoUrl && (
@@ -47,28 +88,32 @@ const PreviewCanvas: React.FC<PreviewCanvasProps> = ({ config, activeSlide }) =>
         className="content-card"
         style={{
           backgroundColor: theme.cardBg,
-          boxShadow: `0 30px 60px -15px rgba(0,0,0,0.3), 0 0 20px -5px ${theme.primary}20`
         }}
       >
         {activeSlide.isRecommended && (
           <div
             className="recommended-badge"
-            style={{ backgroundColor: theme.primary }}
+            style={{
+              background: `linear-gradient(135deg, ${getBadgeColor()} 0%, ${getBadgeColor()}DD 100%)`,
+            }}
           >
-            خطة موصى بها لك
+            ✨ موصى بها لك
           </div>
         )}
 
         <div className="mb-8 mt-4">
           <div
             className="recommendation-reason"
-            style={{ color: theme.primary }}
+            style={{
+              color: theme.primary,
+              backgroundColor: `${theme.primary}15`,
+              borderColor: `${theme.primary}30`,
+            }}
           >
             {activeSlide.recommendationReason}
           </div>
           <h1
             className="plan-title"
-            style={{ color: theme.text }}
           >
             {activeSlide.planName}
           </h1>
@@ -81,8 +126,8 @@ const PreviewCanvas: React.FC<PreviewCanvasProps> = ({ config, activeSlide }) =>
         <button
           className="cta-button"
           style={{
-            backgroundColor: theme.primary,
-            color: config.globalTheme === 'minimalist' ? 'white' : 'black'
+            background: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primary}DD 100%)`,
+            boxShadow: `0 10px 40px ${theme.primary}55, 0 0 0 0 ${theme.primary}50`,
           }}
         >
           {activeSlide.ctaText}
@@ -91,8 +136,8 @@ const PreviewCanvas: React.FC<PreviewCanvasProps> = ({ config, activeSlide }) =>
 
       {/* Footer */}
       <div className="footer-new">
-        <div className="footer-left">منصة المستثمر</div>
-        <div className="footer-right">al_investor.com</div>
+        <div className="footer-left">منصة التاجر الرقمية</div>
+        <div className="footer-right">al-tajer.com</div>
       </div>
     </div>
   );

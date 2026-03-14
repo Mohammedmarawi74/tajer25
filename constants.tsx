@@ -2,40 +2,40 @@
 import { ThemeType, ThemeColors, SlideContent } from './types';
 
 export const THEMES: Record<ThemeType, ThemeColors> = {
-  dark: {
-    primary: '#00ffa3',
-    background: '#0a0a0a',
-    cardBg: 'rgba(20, 20, 20, 0.8)',
-    text: '#ffffff',
-    secondaryText: '#9ca3af',
+  light: {
+    primary: '#2563EB',
+    background: '#FFFFFF',
+    cardBg: '#F8FAFC',
+    text: '#0F172A',
+    secondaryText: '#4B5563',
   },
-  emerald: {
-    primary: '#10b981',
-    background: '#064e3b',
-    cardBg: 'rgba(255, 255, 255, 0.1)',
-    text: '#ffffff',
-    secondaryText: '#d1fae5',
+  gray: {
+    primary: '#2563EB',
+    background: '#F8FAFC',
+    cardBg: '#FFFFFF',
+    text: '#0F172A',
+    secondaryText: '#4B5563',
   },
-  gold: {
-    primary: '#fbbf24',
-    background: '#1a1a1a',
-    cardBg: 'rgba(30, 30, 30, 0.9)',
-    text: '#fef3c7',
-    secondaryText: '#d97706',
+  electric: {
+    primary: '#2563EB',
+    background: '#FFFFFF',
+    cardBg: '#EFF6FF',
+    text: '#0F172A',
+    secondaryText: '#4B5563',
   },
-  'royal-blue': {
-    primary: '#3b82f6',
-    background: '#1e3a8a',
-    cardBg: 'rgba(15, 23, 42, 0.7)',
-    text: '#f8fafc',
-    secondaryText: '#93c5fd',
+  mint: {
+    primary: '#10B981',
+    background: '#FFFFFF',
+    cardBg: '#ECFDF5',
+    text: '#0F172A',
+    secondaryText: '#4B5563',
   },
-  minimalist: {
-    primary: '#111827',
-    background: '#f3f4f6',
-    cardBg: '#ffffff',
-    text: '#111827',
-    secondaryText: '#4b5563',
+  purple: {
+    primary: '#8B5CF6',
+    background: '#FFFFFF',
+    cardBg: '#F5F3FF',
+    text: '#0F172A',
+    secondaryText: '#4B5563',
   }
 };
 

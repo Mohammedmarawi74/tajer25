@@ -25,7 +25,7 @@ export interface CarouselConfig {
   selectedLogoIndex?: number | null;
 }
 
-export type ThemeType = 'dark' | 'emerald' | 'gold' | 'royal-blue' | 'minimalist';
+export type ThemeType = 'light' | 'gray' | 'electric' | 'mint' | 'purple';
 
 export interface ThemeColors {
   primary: string;

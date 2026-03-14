@@ -40,7 +40,7 @@ const App: React.FC = () => {
   const [config, setConfig] = useState<CarouselConfig>({
     slides: INITIAL_SLIDES,
     activeSlideIndex: 0,
-    globalTheme: 'dark',
+    globalTheme: 'light',
     customCSS: '',
     platformName: 'رادار المستثمر',
     selectedLogoIndex: null,
@@ -124,7 +124,7 @@ const App: React.FC = () => {
         backgroundColor: null,
       });
       const link = document.createElement('a');
-      link.download = `radar-investor-slide-${config.activeSlideIndex + 1}.png`;
+      link.download = `al-tajer-slide-${config.activeSlideIndex + 1}.png`;
       link.href = canvas.toDataURL('image/png');
       link.click();
     } catch (err) {
@@ -142,7 +142,7 @@ const App: React.FC = () => {
       {/* Sidebar Navigation (Icons) */}
       <aside className="sidebar">
         <div className="sidebar-logo">
-          ر
+          ت
         </div>
         <button
           onClick={() => setActiveTab(TabType.CONTENT)}
@@ -175,7 +175,7 @@ const App: React.FC = () => {
         <div className="panel-header">
           <h2 className="panel-title">
             {activeTab === TabType.CONTENT ? 'محتوى الشريحة' :
-             activeTab === TabType.THEME ? 'أنماط التصميم' : 'محرر CSS'}
+             activeTab === TabType.THEME ? 'أنماط التصميم' : 'محرر CSS المخصص'}
           </h2>
         </div>
 
@@ -316,7 +316,7 @@ const App: React.FC = () => {
 
           {activeTab === TabType.CSS && (
             <div className="css-editor">
-              <p className="css-editor-hint">يمكنك كتابة كود CSS مخصص هنا لتغيير مظهر أي عنصر في التصميم. استخدم محرر الكود بحرص.</p>
+              <p className="css-editor-hint">يمكنك كتابة كود CSS مخصص هنا لتغيير مظهر أي عنصر في التصميم. استخدم محرر الكود بحرص لتخصيص الألوان والخطوط والعناصر.</p>
               <textarea
                 dir="ltr"
                 value={config.customCSS}
@@ -334,7 +334,7 @@ const App: React.FC = () => {
         <header className="preview-header">
           <div className="header-title">
             <h1 className="header-title-text">
-              <span className="header-title-accent italic">رادار</span> المستثمر
+              <span className="header-title-accent italic">التاجر</span> الرقمية
             </h1>
             <div className="header-divider"></div>
             <span className="header-project">مشروع: كاروسيل الخطط الذكية 2030</span>
