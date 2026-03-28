@@ -97,7 +97,7 @@ const PreviewCanvas: React.FC<PreviewCanvasProps> = ({ config, activeSlide }) =>
               background: `linear-gradient(135deg, ${getBadgeColor()} 0%, ${getBadgeColor()}DD 100%)`,
             }}
           >
-            ✨ موصى بها لك
+             موصى بها لك
           </div>
         )}
 
@@ -136,8 +136,8 @@ const PreviewCanvas: React.FC<PreviewCanvasProps> = ({ config, activeSlide }) =>
 
       {/* Footer */}
       <div className="footer-new">
-        <div className="footer-left">منصة التاجر الرقمية</div>
-        <div className="footer-right">al-tajer.com</div>
+        <div className="footer-left">منصة التاجر</div>
+        <div className="footer-right">dtajer</div>
       </div>
     </div>
   );

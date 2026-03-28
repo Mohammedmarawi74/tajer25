@@ -16,7 +16,7 @@ import {
   Upload,
   X
 } from 'lucide-react';
-import html2canvas from 'html2canvas';
+import * as htmlToImage from 'html-to-image';
 import { TabType, CarouselConfig, SlideContent, ThemeType } from './types';
 import { INITIAL_SLIDES, THEMES } from './constants';
 import PreviewCanvas from './components/PreviewCanvas';
@@ -115,20 +115,47 @@ const App: React.FC = () => {
   const downloadImage = async () => {
     if (!canvasRef.current) return;
     setIsExporting(true);
+    
+    // Exact dimensions from CSS
+    const width = 720;
+    const height = 650;
+    
     try {
-      // Small delay to ensure all assets are ready
-      await new Promise(r => setTimeout(r, 500));
-      const canvas = await html2canvas(canvasRef.current, {
-        useCORS: true,
-        scale: 3, // High resolution
-        backgroundColor: null,
+      // Ensure fonts are ready
+      if (document.fonts) {
+        await document.fonts.ready;
+      }
+      
+      // Wait for any UI settling
+      await new Promise(r => setTimeout(r, 800));
+
+      const dataUrl = await htmlToImage.toPng(canvasRef.current, {
+        quality: 1.0,
+        pixelRatio: 2, // 2 is great for high-quality sharing
+        width: width,
+        height: height,
+        style: {
+          transform: 'none',
+          transition: 'none',
+          margin: '0',
+          padding: '0',
+          borderRadius: '0'
+        },
+        // Force the element to stay at its true size during capture
+        canvasWidth: width * 2,
+        canvasHeight: height * 2
       });
-      const link = document.createElement('a');
-      link.download = `al-tajer-slide-${config.activeSlideIndex + 1}.png`;
-      link.href = canvas.toDataURL('image/png');
-      link.click();
+
+      const fileName = `dtajer-carousel-${Date.now()}.png`;
+      const downloader = document.createElement('a');
+      downloader.download = fileName;
+      downloader.href = dataUrl;
+      downloader.click();
+      
     } catch (err) {
       console.error('Export failed', err);
+      // Try a secondary approach or alert
+      alert('نعتذر، حدث خطأ. جرب إعادة المحاولة مرة أخرى.');
     } finally {
       setIsExporting(false);
     }

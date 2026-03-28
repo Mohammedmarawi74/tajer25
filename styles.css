@@ -1,10 +1,11 @@
 /* Global Styles - Al-Tajer Digital Modern UI */
 * {
   box-sizing: border-box;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 body {
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   background-color: #F8FAFC;
   color: #0F172A;
   margin: 0;
@@ -34,7 +35,7 @@ body {
   height: 100vh;
   background-color: #F8FAFC;
   overflow: hidden;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 /* Sidebar Navigation */
@@ -131,7 +132,7 @@ body {
   font-weight: 700;
   margin: 0;
   color: #0F172A;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .panel-content {
@@ -157,7 +158,7 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .layout-button.primary {
@@ -198,7 +199,7 @@ body {
   font-size: 0.75rem;
   color: #64748B;
   font-weight: 600;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .form-input,
@@ -211,7 +212,7 @@ body {
   font-size: 0.875rem;
   outline: none;
   transition: all 0.2s ease;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   color: #0F172A;
 }
 
@@ -257,7 +258,7 @@ body {
   font-size: 0.875rem;
   color: #475569;
   font-weight: 600;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .toggle-switch {
@@ -345,7 +346,7 @@ body {
   font-size: 0.625rem;
   color: #64748B;
   font-weight: 600;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 /* Logo Selection */
@@ -398,7 +399,7 @@ body {
   font-size: 0.625rem;
   color: #64748B;
   font-weight: 600;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .logo-selected-badge {
@@ -430,7 +431,7 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);
 }
 
@@ -481,7 +482,7 @@ body {
 .theme-card-name {
   font-weight: 700;
   font-size: 0.9375rem;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .theme-card-colors {
@@ -518,7 +519,7 @@ body {
   font-size: 0.75rem;
   color: #64748B;
   line-height: 1.75;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .css-editor-textarea {
@@ -575,7 +576,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   margin: 0;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   color: #0F172A;
 }
 
@@ -597,7 +598,7 @@ body {
   font-size: 0.75rem;
   color: #64748B;
   font-weight: 600;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .header-actions {
@@ -619,7 +620,7 @@ body {
   color: #475569;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .header-button:hover {
@@ -672,13 +673,12 @@ body {
 }
 
 .export-canvas {
-  width: 1080px;
-  height: 1080px;
+  width: 720px;
+  height: 650px;
   background-color: #FFFFFF;
   box-shadow: 0 25px 80px rgba(15, 23, 42, 0.12);
-  overflow: hidden;
   position: relative;
-  border-radius: 1.5rem;
+  border-radius: 0;
 }
 
 /* Slide Manager (Bottom) */
@@ -789,7 +789,7 @@ body {
 .slide-add-text {
   font-size: 0.625rem;
   font-weight: 600;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 /* Preview Canvas Component */
@@ -800,9 +800,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 3.5rem;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  justify-content: flex-start;
+  padding: 3rem 3.5rem;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   user-select: none;
 }
 
@@ -1030,7 +1030,7 @@ body {
   z-index: 15;
   width: 100%;
   max-width: 52rem;
-  padding: 3.5rem 4rem;
+  padding: 2.5rem 3rem;
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px);
@@ -1055,7 +1055,7 @@ body {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 0.9375rem;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   box-shadow: 
     0 10px 30px rgba(37, 99, 235, 0.3),
     0 0 0 4px rgba(255, 255, 255, 0.5);
@@ -1073,17 +1073,17 @@ body {
   border-radius: 9999px;
   color: #2563EB;
   display: inline-block;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
 /* Plan Title - Bold Two-Tone Style */
 .plan-title {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.2;
   margin: 0 0 1.5rem 0;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   background: linear-gradient(135deg, #0F172A 0%, #475569 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1099,7 +1099,7 @@ body {
   max-width: 40rem;
   margin-bottom: 2.5rem;
   font-weight: 400;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 /* CTA Button - Pill Shape */
@@ -1111,7 +1111,7 @@ body {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   cursor: pointer;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
   color: #FFFFFF;
   box-shadow: 
@@ -1148,10 +1148,14 @@ body {
 .footer-left {
   font-size: 0.875rem;
   font-weight: 700;
-  color: #64748B;
+  color: #2563EB;
   text-align: right;
   letter-spacing: 0.02em;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .footer-right {
@@ -1160,7 +1164,7 @@ body {
   color: #2563EB;
   text-align: left;
   letter-spacing: 0.05em;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1179,8 +1183,8 @@ body {
 /* Responsive Adjustments */
 @media (max-width: 1400px) {
   .export-canvas {
-    width: 900px;
-    height: 900px;
+    width: 600px;
+    height: 542px;
   }
   
   .plan-title {
@@ -1194,8 +1198,8 @@ body {
 
 @media (max-width: 1200px) {
   .export-canvas {
-    width: 720px;
-    height: 720px;
+    width: 500px;
+    height: 451px;
   }
   
   .plan-title {
